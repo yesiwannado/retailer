@@ -1,0 +1,282 @@
+extends template
+
+block title
+    title Retailer Недвижимость
+
+
+block header
+    include ./components/header
+
+block content
+    main
+
+        .block.top-block
+            .content
+
+                p.welcome-phrase
+                    span Добро пожаловать в личный кабинет, Олег.
+                    br
+                    | Здесь вы можете управлять вашим Центром Переговоров.
+
+                .day-counter
+                    .date-in-counter 06.12.2018
+                    .counter-itself
+                        .counter-wrapper
+                            .counter-blue-line
+                        p.counter-text
+                            | до следующего центра переговоров осталось
+                            span  26
+                            |  дней
+
+                ul.main-menu__list
+                    li.main-menu__item.visited
+                        a.main-menu__link.anchor-link(href='#limits')
+                            | ввести ограничения
+                            span / введены /
+                    li.main-menu__item
+                        a.main-menu__link.anchor-link(href='#') запись на переговоры
+                    li.main-menu__item
+                        a.main-menu__link.anchor-link(href='#') мое расписание
+                    li.main-menu__item
+                        a.main-menu__link.anchor-link(href='#') пакеты и оплата
+                    li.main-menu__item
+                        a.main-menu__link.anchor-link(href='#') получить qr-код
+
+                .svodka
+                    header.svodka-header
+                        h3.svodka-title Краткая сводка
+                        p.svodka-legend
+                            | всего  |
+                            span  сегодня
+
+                    ul.svodka-col.wb
+                        li брендов зарегистрировалось
+                            span  223
+                            span.blue  +5
+                        li ??
+                            span  87
+                            span.blue  +2
+                        li ??
+                            span  136
+                            span.blue  +3
+                        li запланировано раундов переговоров
+                            span  518
+                            span.blue  +22
+
+                    ul.svodka-col
+                        li моих раундов
+                            span  16
+                            span.blue  +1
+                        li я записан
+                            span  11
+                            span.blue  +1
+                        li ко мне записались
+                            span  5
+
+        .block.limits-block.reg-block#limits
+            .content
+                h2.block-title ограничения на подбор партнеров по переговорам
+
+                br
+                p.limits-switcher с ограничениями
+
+                .limits-filters-part
+                    .limits-time-line
+                        h3.bold-blue-title.time-title время присутствия
+                        span.fromto с
+                        input.common-input(type="text")
+                        span.fromto до
+                        input.common-input(type="text")
+                        span.fromto часов
+
+                    .limit-filters-cards-wrapper
+                        .card.card-under
+                        .card.card-main
+
+                            .lf-plate
+                                span.state-1
+                                    span +
+                                    |  тип объекта
+                                .state-2
+                                    h3.state-title тип объекта
+                                    .dd-plate-area
+                                        p.dd-title#type-dd-title выберите тип объекта
+                                        ul.plate-dd#type-dd
+                                            li
+                                                a(href="#") площадь в тц
+                                            li
+                                                a(href="#") отдельное здание
+                                            li
+                                                a(href="#") стрит-ретейл
+                                            li
+                                                a(href="#") участок
+
+                                        img.tc-pic(src='img/tc.png')
+
+                            .lf-plate
+                                span.state-1
+                                    span +
+                                    |  назначение
+
+                                .state-2
+                                    h3.state-title назначение объекта (до 12)
+
+                                    .naz-line
+                                        .one-naz-plate +
+                                            ul.plate-dd.mCustomScrollbar#naz-dd
+                                                li.any
+                                                    a(href="#") Любое назначение
+                                                li.fashion
+                                                    a(href="#") мода
+                                                li.jewell
+                                                    a(href="#") ювелирные изделия и аксессуары
+                                                li.kids
+                                                    a(href="#") товары для детей
+                                                li.fmcg
+                                                    a(href="#") fmcg, алкоголь
+                                                li.food
+                                                    a(href="#") еда
+                                                li.enter
+                                                    a(href="#") развлечения
+                                                li.beauty
+                                                    a(href="#") красота и здоровье
+                                                li.mob
+                                                    a(href="#") мобильные устройства
+                                        .one-naz-plate +
+                                        .one-naz-plate +
+                                        .one-naz-plate +
+                                        .one-naz-plate +
+                                        .one-naz-plate +
+                                    .naz-line
+                                        .one-naz-plate +
+                                        .one-naz-plate +
+                                        .one-naz-plate +
+                                        .one-naz-plate +
+                                        .one-naz-plate +
+                                        .one-naz-plate +
+
+                            .lf-plate
+                                span.state-1
+                                    span +
+                                    |  площадь
+                                .state-2
+                                    h3.state-title площадь
+                                    .dd-plate-area
+                                        p.dd-title.noar#sq-dd-title площадь
+                                        input.dm-input(placeholder="Укажите диапазон")
+                                        span.nearinp м²
+                            .lf-plate
+                                span.state-1
+                                    span +
+                                    |  локация
+                                .state-2
+                                    h3.state-title
+                                        | локация
+                                        span население
+                                    .dd-plate-area.loc
+                                        p.dd-title#loc-title вся россия
+
+                                        .plate-dd.loc-dd.mCustomScrollbar#loc-dd
+                                            ul.level-one-list
+                                                li.bold
+                                                    span Вся Россия
+                                                    ul.level-two-list
+                                                        li
+                                                            span Центр
+                                                            ul.level-three-list
+                                                                li.final
+                                                                    span Запездье
+
+                                                li.closed
+                                                    span Не вся Россия
+
+                                                li.closed
+                                                    span Кусочек России
+
+                                                li.closed
+                                                    span Маленько Рашки
+                                                li.closed
+                                                    span Чуть-чуть Расеянства
+                                                li.closed
+                                                    span Слегка Русь
+                                                li.closed
+                                                    span Малёк Родины
+                                                li.closed
+                                                    span Немножечко Расея
+
+
+
+                                        .ia
+                                            span.nearinp.morethan >
+                                            input.dm-input.loc-input(placeholder="")
+                                            span.nearinp ТЫС
+
+
+                            button.grey-btn Применить ограничения
+
+                        .card.card-adding
+                            p
+                                span.p +
+                                br
+                                span  объект
+
+
+                .limits-info-part
+                    h3.lip-title Чтобы ваши переговоры прошли эффективнее, мы предлагаем ввести ограничения на подбор партнеров.
+                    .limits-nums-block
+                        .line
+                        .num-block.dark
+                            p.num 01
+                            p.num-text
+                                | Укажите
+                                span  параметры площадей,
+                                br
+                                |  которые вы ищете, а так же время
+                                br
+                                |  вашего присутствия на Центре
+                                br
+                                |  Переговоров
+
+                        .num-block.dark
+                            p.num 02
+                            p.num-text
+                                | Система
+                                span  подберет
+                                br
+                                span  подходящих
+                                |  продавцов
+
+                        .num-block.dark
+                            p.num 03
+                            p.num-text
+                                span Вы сможете встретиться:
+                                br
+                                | -  С подходящим участниками
+                                br
+                                | -  С компаниями, не указавшими
+                                br
+                                |  ограничения
+
+                    h3.lip-title.light Вы можете начать подбор без ограничений. Для этого кликните по переключателю в правом верхнем углу экрана.
+                    .limits-nums-block.fleft
+                        .line
+                        .num-block.light
+                            p.num 01
+                            p.num-text
+                                | К вам смогут записаться
+                                span  любые компании, вне
+                                br
+                                |  зависимости от того, соответствуют ли они вашим
+                                br
+                                |  требованиям к торговым площадям
+
+                        .num-block.light
+                            p.num 02
+                            p.num-text
+                                | Вы сможете записаться только к компаниям,
+                                br
+                                span  не указавшим
+                                |  ограничения
+
+
+include ./components/footer
