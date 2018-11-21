@@ -68,6 +68,22 @@ $(document).ready(function() {
         return false;
     });
 
+    $('.signup-btn').click(function (sb) {
+        sb.preventDefault();
+        $(this).addClass('clicked');
+        $(this).text(function(i, text){
+            return text === "Открыть запись" ? "Запись открыта" : "Открыть запись";
+        })
+    })
+    $('.categ-switcher').click(function () {
+        $(this).toggleClass('clicked');
+        $(this).text(function(i, text){
+            return text === "все компании без сортировки" ? "компании с сортировкой" : "все компании без сортировки";
+        })
+    })
+    $('.form-timetable').click(function () {
+      $('.timetable').addClass('opened')
+    })
 
 
 });

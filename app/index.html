@@ -48,9 +48,9 @@
           </div>
           <ul class="main-menu__list">
             <li class="main-menu__item visited"><a class="main-menu__link anchor-link" href="#limits">ввести ограничения<span>/ введены /</span></a></li>
-            <li class="main-menu__item"><a class="main-menu__link anchor-link" href="#">запись на переговоры</a></li>
-            <li class="main-menu__item"><a class="main-menu__link anchor-link" href="#">мое расписание</a></li>
-            <li class="main-menu__item"><a class="main-menu__link anchor-link" href="#">пакеты и оплата</a></li>
+            <li class="main-menu__item"><a class="main-menu__link anchor-link" href="#zapis">запись на переговоры</a></li>
+            <li class="main-menu__item"><a class="main-menu__link anchor-link" href="#zapis">мое расписание</a></li>
+            <li class="main-menu__item"><a class="main-menu__link anchor-link" href="#tarif">пакеты и оплата</a></li>
             <li class="main-menu__item"><a class="main-menu__link anchor-link" href="#">получить qr-код</a></li>
           </ul>
           <div class="svodka">
@@ -209,6 +209,314 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="block reg-block dark-block" id="zapis">
+        <div class="content">
+          <h2 class="block-title">запись на переговоры</h2>
+          <div class="signup-block">
+            <div class="signup-num-block"><span class="signup-num">01</span>
+              <div class="signup-text-area">
+                <h3 class="signup-st">Откройте запись к себе<span> бесплатно</span></h3>
+                <p class="signup-text">Операторы площадей увидят вашу компанию в списке участников и смогут записаться<br> на переговоры. Мы оповестим вас о входящих заявках.</p><a class="common-btn signup-btn" href="#">Открыть запись</a>
+              </div>
+            </div>
+            <div class="signup-num-block"><span class="signup-num">02</span>
+              <div class="signup-text-area">
+                <h3 class="signup-st">Запишитесь на переговоры<span> платно</span></h3>
+                <p class="signup-text">Выберите партнеров из списка ниже. Система предложит вам расписание и подберет подходящий<br> пакет переговоров.</p>
+                <p class="signup-text">• Чтобы увидеть компании, подходящие вам по введенным ранее параметрам, кликните на<br> соответствующий переключатель, который находится под строкой поиска по компаниям.</p>
+              </div>
+            </div>
+          </div>
+          <div class="svodka instr">
+            <header class="svodka-header">
+              <h3 class="svodka-title"> инструкции</h3>
+            </header>
+            <div class="instr-block"><span class="instr-num">01</span>
+              <div class="instr-text-part">
+                <h4 class="instr-title">Выберите интересующие вас компании</h4>
+                <p class="instr-text">
+                  Некоторые компаний могут быть недоступны для записи.
+                  Это может случиться, если они не подходят по указанным вами ограничениям или если свободные места закончились.
+                </p>
+              </div>
+            </div>
+            <div class="instr-block"><span class="instr-num">02</span>
+              <div class="instr-text-part">
+                <h4 class="instr-title">При необходимости, отредактируйте свой список</h4>
+                <p class="instr-text">Пока вы не подтвердите свой выбор, можно удалять лишние компании и добавлять новые.</p>
+              </div>
+            </div>
+            <div class="instr-block"><span class="instr-num">03</span>
+              <div class="instr-text-part">
+                <h4 class="instr-title">как сформировать мое расписание</h4>
+                <p class="instr-text">Система автоматически определит время переговоров и присвоит каждому раунду стол в зависимости от заполненности столов и указанного вами времени присутствия.</p>
+              </div>
+            </div>
+          </div>
+          <div class="big-info">Обратите внимание, что за несколько дней до встречи система может изменить расписание, чтобы учесть пожелания всех участников.<br><span> Актуальное расписание</span><span class="white"> всегда</span><span> будет доступно для вас на этой странице.</span></div>
+          <div class="c-select-wrapper">
+            <div class="c-select-block">
+              <div class="categ-col">
+                <h3 class="categ-title">сегменты</h3>
+                <input class="search-input" type="search" placeholder="Начните вводить компанию">
+                <div class="categ-switcher">все компании без сортировки</div>
+                <ul class="categ-list">
+                  <li class="fashion"><a href="#">мода</a></li>
+                  <li class="jewell"><a href="#">ювелирные изделия и аксессуары</a></li>
+                  <li class="kids"><a href="#">товары для детей</a></li>
+                  <li class="fmcg"><a href="#">fmcg, алкоголь</a></li>
+                  <li class="food"><a href="#">еда</a></li>
+                  <li class="enter"><a href="#">развлечения</a></li>
+                  <li class="beauty"><a href="#">красота и здоровье</a></li>
+                  <li class="mob"><a href="#">мобильные устройства</a></li>
+                </ul>
+              </div>
+              <div class="categ-selects-col">
+                <h3 class="categ-title">список компаний</h3>
+                <div class="com-scroller mCustomScrollbar">
+                  <div class="selects-col">
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="two" id="two" hidden="hidden">
+                      <label class="chb-label" for="two">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                  </div>
+                  <div class="selects-col">
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                    <div class="ch-line">
+                      <input class="checkbox" type="checkbox" name="one" id="one" hidden="hidden">
+                      <label class="chb-label" for="one">Familia<br><a href="#">companywebsite.com</a></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="c-bubbles-block">
+              <h3 class="categ-title">вы выбрали</h3><span class="categ-subtitle">10/20</span>
+              <ul class="selected-legend">
+                <li class="bubble dg">компания доступна</li>
+                <li class="bubble lg">недоступна, выберите другую</li>
+                <li class="bubble full b">компания подходит вам по указанным параметрам</li>
+              </ul>
+              <ul class="selected-bubbles">
+                <li class="bubble lg">Familia</li>
+                <li class="bubble dg">Ralf Ringer</li>
+                <li class="bubble b">Jack Wolfskin</li>
+                <li class="bubble lg">Pidoras</li>
+                <li class="bubble dg">Kraken</li>
+                <li class="bubble dg">Marishka</li>
+                <li class="bubble b">Gady</li>
+                <li class="bubble b">Bomba</li>
+                <li class="bubble lg">Nike</li>
+                <li class="bubble dg">Asos</li>
+              </ul>
+              <ul class="empty-bubbles">
+                <li>пусто</li>
+                <li>пусто</li>
+                <li>пусто</li>
+                <li>пусто</li>
+                <li>пусто</li>
+              </ul>
+              <p class="form-timetable">сформировать расписание</p>
+              <div class="timetable">
+                <header>
+                  <h3 class="categ-title">мое расписание</h3>
+                  <p class="edit-btn"></p>
+                </header>
+                <div class="tt-table">
+                  <div class="t-line g"><span class="time">9:00</span><span class="a">A2</span><span class="name">Familia</span></div>
+                  <div class="t-line"><span class="time">9:00</span><span class="a">A2</span><span class="name">Familia</span></div>
+                  <div class="t-line g"><span class="time">9:00</span><span class="a">A2</span><span class="name">Familia</span></div>
+                  <div class="t-line"><span class="time">9:00</span><span class="a">A2</span><span class="name">Familia</span></div>
+                  <div class="t-line g"><span class="time">9:00</span><span class="a">A2</span><span class="name">Familia</span></div>
+                  <div class="t-line"><span class="time">9:00</span><span class="a">A2</span><span class="name">Familia</span></div>
+                  <div class="t-line g"><span class="time">9:00</span><span class="a">A2</span><span class="name">Familia</span></div>
+                  <div class="t-line"><span class="time">9:00</span><span class="a">A2</span><span class="name">Familia</span></div>
+                  <div class="t-line g"><span class="time">9:00</span><span class="a">A2</span><span class="name">Familia</span></div>
+                  <div class="t-line"><span class="time">9:00</span><span class="a">A2</span><span class="name">Familia</span></div>
+                  <div class="t-line g"><span class="time">9:00</span><span class="a">A2</span><span class="name">Familia</span></div>
+                  <div class="t-line"><span class="time">9:00</span><span class="a">A2</span><span class="name">Familia</span></div>
+                  <div class="t-line g"><span class="time">9:00</span><span class="a">A2</span><span class="name">Familia</span></div>
+                  <div class="t-line"><span class="time">9:00</span><span class="a">A2</span><span class="name">Familia</span></div>
+                  <div class="t-line g"><span class="time">9:00</span><span class="a">A2</span><span class="name">Familia</span></div>
+                  <div class="t-line"><span class="time">9:00</span><span class="a">A2</span><span class="name">Familia</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="block tarif-block reg-block" id="tarif">
+        <div class="grey-bg"></div>
+        <div class="content">
+          <h2 class="block-title">выбор пакета и оплата</h2>
+          <div class="packs-wrapper">
+            <div class="one-pack">
+              <p class="amount">5 переговоров</p>
+              <p class="price">25 000₽</p>
+              <p class="subprice">/   1 раунд = 5000₽   /</p><a class="select-pack" href="#">Выбрать</a>
+            </div>
+            <div class="one-pack">
+              <p class="amount">5 переговоров</p>
+              <p class="price">25 000₽</p>
+              <p class="subprice">/   1 раунд = 5000₽   /</p><a class="select-pack" href="#">Выбрать</a>
+            </div>
+            <div class="one-pack">
+              <p class="amount">5 переговоров</p>
+              <p class="price">25 000₽</p>
+              <p class="subprice">/   1 раунд = 5000₽   /</p><a class="select-pack" href="#">Выбрать</a>
+            </div>
+            <div class="one-pack">
+              <div class="hint"><span class="square"></span>
+                <p>скорее всего, вам подойдет<span> данный пакет</span></p>
+              </div>
+              <p class="amount">5 переговоров</p>
+              <p class="price">25 000₽</p>
+              <p class="subprice">/   1 раунд = 5000₽   /</p><a class="select-pack" href="#">Выбрать</a>
+            </div>
+            <div class="one-pack">
+              <p class="amount">5 переговоров</p>
+              <p class="price">25 000₽</p>
+              <p class="subprice">/   1 раунд = 5000₽   /</p><a class="select-pack" href="#">Выбрать</a>
+            </div>
+          </div>
+          <p class="packs-info">— Пакеты 20 и 30 переговоров могут быть разделены<span> между несколькими</span> делегатами</p>
         </div>
       </div>
     </main>

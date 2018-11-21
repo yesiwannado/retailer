@@ -34,11 +34,11 @@ block content
                             | ввести ограничения
                             span / введены /
                     li.main-menu__item
-                        a.main-menu__link.anchor-link(href='#') запись на переговоры
+                        a.main-menu__link.anchor-link(href='#zapis') запись на переговоры
                     li.main-menu__item
-                        a.main-menu__link.anchor-link(href='#') мое расписание
+                        a.main-menu__link.anchor-link(href='#zapis') мое расписание
                     li.main-menu__item
-                        a.main-menu__link.anchor-link(href='#') пакеты и оплата
+                        a.main-menu__link.anchor-link(href='#tarif') пакеты и оплата
                     li.main-menu__item
                         a.main-menu__link.anchor-link(href='#') получить qr-код
 
@@ -277,6 +277,534 @@ block content
                                 br
                                 span  не указавшим
                                 |  ограничения
+
+        .block.reg-block.dark-block#zapis
+            .content
+                h2.block-title запись на переговоры
+
+                .signup-block
+                    .signup-num-block
+                        span.signup-num 01
+
+                        .signup-text-area
+
+                            h3.signup-st
+                                | Откройте запись к себе
+                                span  бесплатно
+
+                            p.signup-text
+                                | Операторы площадей увидят вашу компанию в списке участников и смогут записаться
+                                br
+                                |  на переговоры. Мы оповестим вас о входящих заявках.
+
+                            a.common-btn.signup-btn(href="#") Открыть запись
+
+                    .signup-num-block
+                        span.signup-num 02
+
+                        .signup-text-area
+
+                            h3.signup-st
+                                | Запишитесь на переговоры
+                                span  платно
+
+                            p.signup-text
+                                | Выберите партнеров из списка ниже. Система предложит вам расписание и подберет подходящий
+                                br
+                                |  пакет переговоров.
+
+                            p.signup-text
+                                | • Чтобы увидеть компании, подходящие вам по введенным ранее параметрам, кликните на
+                                br
+                                |  соответствующий переключатель, который находится под строкой поиска по компаниям.
+
+                .svodka.instr
+                    header.svodka-header
+                        h3.svodka-title  инструкции
+
+                    .instr-block
+                        span.instr-num 01
+                        .instr-text-part
+                            h4.instr-title Выберите интересующие вас компании
+                            p.instr-text
+                                | Некоторые компаний могут быть недоступны для записи.
+                                | Это может случиться, если они не подходят по указанным вами ограничениям или если свободные места закончились.
+
+                    .instr-block
+                        span.instr-num 02
+                        .instr-text-part
+                            h4.instr-title При необходимости, отредактируйте свой список
+                            p.instr-text
+                                | Пока вы не подтвердите свой выбор, можно удалять лишние компании и добавлять новые.
+
+
+                    .instr-block
+                        span.instr-num 03
+                        .instr-text-part
+                            h4.instr-title как сформировать мое расписание
+                            p.instr-text
+                                | Система автоматически определит время переговоров и присвоит каждому раунду стол в зависимости от заполненности столов и указанного вами времени присутствия.
+
+                .big-info
+                    | Обратите внимание, что за несколько дней до встречи система может изменить расписание, чтобы учесть пожелания всех участников.
+                    br
+                    span  Актуальное расписание
+                    span.white  всегда
+                    span  будет доступно для вас на этой странице.
+
+                .c-select-wrapper
+                    .c-select-block
+                        .categ-col
+
+                            h3.categ-title сегменты
+
+                            input.search-input(type="search" placeholder="Начните вводить компанию")
+                            .categ-switcher все компании без сортировки
+
+                            ul.categ-list
+                                li.fashion
+                                    a(href="#") мода
+                                li.jewell
+                                    a(href="#") ювелирные изделия и аксессуары
+                                li.kids
+                                    a(href="#") товары для детей
+                                li.fmcg
+                                    a(href="#") fmcg, алкоголь
+                                li.food
+                                    a(href="#") еда
+                                li.enter
+                                    a(href="#") развлечения
+                                li.beauty
+                                    a(href="#") красота и здоровье
+                                li.mob
+                                    a(href="#") мобильные устройства
+
+                        .categ-selects-col
+                            h3.categ-title список компаний
+                            .com-scroller.mCustomScrollbar
+                                .selects-col
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='two' id='two' hidden='hidden')
+                                        label.chb-label(for="two")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+                                .selects-col
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                                    .ch-line
+                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
+                                        label.chb-label(for="one")
+                                            | Familia
+                                            br
+                                            a(href="#") companywebsite.com
+
+                    .c-bubbles-block
+                        h3.categ-title вы выбрали
+                        span.categ-subtitle 10/20
+
+                        ul.selected-legend
+                            li.bubble.dg компания доступна
+                            li.bubble.lg недоступна, выберите другую
+                            li.bubble.full.b компания подходит вам по указанным параметрам
+
+                        ul.selected-bubbles
+                            li.bubble.lg Familia
+                            li.bubble.dg Ralf Ringer
+                            li.bubble.b Jack Wolfskin
+                            li.bubble.lg Pidoras
+                            li.bubble.dg Kraken
+                            li.bubble.dg Marishka
+                            li.bubble.b Gady
+                            li.bubble.b Bomba
+                            li.bubble.lg Nike
+                            li.bubble.dg Asos
+
+                        ul.empty-bubbles
+                            li пусто
+                            li пусто
+                            li пусто
+                            li пусто
+                            li пусто
+
+                        p.form-timetable сформировать расписание
+
+                        .timetable
+                            header
+                                h3.categ-title мое расписание
+                                p.edit-btn
+
+                            .tt-table
+                                .t-line.g
+                                    span.time 9:00
+                                    span.a A2
+                                    span.name Familia
+
+                                .t-line
+                                    span.time 9:00
+                                    span.a A2
+                                    span.name Familia
+
+                                .t-line.g
+                                    span.time 9:00
+                                    span.a A2
+                                    span.name Familia
+
+                                .t-line
+                                    span.time 9:00
+                                    span.a A2
+                                    span.name Familia
+
+                                .t-line.g
+                                    span.time 9:00
+                                    span.a A2
+                                    span.name Familia
+
+                                .t-line
+                                    span.time 9:00
+                                    span.a A2
+                                    span.name Familia
+
+                                .t-line.g
+                                    span.time 9:00
+                                    span.a A2
+                                    span.name Familia
+
+                                .t-line
+                                    span.time 9:00
+                                    span.a A2
+                                    span.name Familia
+
+                                .t-line.g
+                                    span.time 9:00
+                                    span.a A2
+                                    span.name Familia
+
+                                .t-line
+                                    span.time 9:00
+                                    span.a A2
+                                    span.name Familia
+
+                                .t-line.g
+                                    span.time 9:00
+                                    span.a A2
+                                    span.name Familia
+
+                                .t-line
+                                    span.time 9:00
+                                    span.a A2
+                                    span.name Familia
+
+                                .t-line.g
+                                    span.time 9:00
+                                    span.a A2
+                                    span.name Familia
+
+                                .t-line
+                                    span.time 9:00
+                                    span.a A2
+                                    span.name Familia
+
+                                .t-line.g
+                                    span.time 9:00
+                                    span.a A2
+                                    span.name Familia
+
+                                .t-line
+                                    span.time 9:00
+                                    span.a A2
+                                    span.name Familia
+
+        .block.tarif-block.reg-block#tarif
+            .grey-bg
+            .content
+                h2.block-title выбор пакета и оплата
+
+                .packs-wrapper
+                    .one-pack
+                        p.amount 5 переговоров
+                        p.price 25 000₽
+                        p.subprice /   1 раунд = 5000₽   /
+
+                        a.select-pack(href="#") Выбрать
+
+                    .one-pack
+                        p.amount 5 переговоров
+                        p.price 25 000₽
+                        p.subprice /   1 раунд = 5000₽   /
+
+                        a.select-pack(href="#") Выбрать
+
+                    .one-pack
+                        p.amount 5 переговоров
+                        p.price 25 000₽
+                        p.subprice /   1 раунд = 5000₽   /
+
+                        a.select-pack(href="#") Выбрать
+
+                    .one-pack
+
+                        .hint
+                            span.square
+                            p
+                                | скорее всего, вам подойдет
+                                span  данный пакет
+
+                        p.amount 5 переговоров
+                        p.price 25 000₽
+                        p.subprice /   1 раунд = 5000₽   /
+
+                        a.select-pack(href="#") Выбрать
+
+                    .one-pack
+                        p.amount 5 переговоров
+                        p.price 25 000₽
+                        p.subprice /   1 раунд = 5000₽   /
+
+                        a.select-pack(href="#") Выбрать
+
+                p.packs-info
+                    | — Пакеты 20 и 30 переговоров могут быть разделены
+                    span  между несколькими
+                    |  делегатами
+
+
 
 
 include ./components/footer
