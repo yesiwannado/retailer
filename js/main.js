@@ -71,9 +71,7 @@ $(document).ready(function() {
     $('.signup-btn').click(function (sb) {
         sb.preventDefault();
         $(this).addClass('clicked');
-        $(this).text(function(i, text){
-            return text === "Открыть запись" ? "Запись открыта" : "Открыть запись";
-        })
+        $(this).text('запись открыта');
     })
     $('.categ-switcher').click(function () {
         $(this).toggleClass('clicked');
@@ -84,7 +82,43 @@ $(document).ready(function() {
     $('.form-timetable').click(function () {
       $('.timetable').addClass('opened')
     })
+    $('.edit-btn').click(function () {
+        $('.timetable').removeClass('opened')
+    })
 
+    $('.plate-dd').click(function (pp) {
+        pp.stopPropagation();
+    })
+
+    $('.larrow').click(function () {
+        $(this).toggleClass('opened');
+    })
+
+    $('.level-one-list .larrow.f').click(function () {
+        $(this).parent('li').find('.level-two-list').fadeToggle(300);
+    })
+    $('.level-two-list .larrow').click(function () {
+        $('.level-three-list').fadeToggle(300);
+    })
+
+    $('.card-area').click(function () {
+        $(this).addClass('filling');
+        $('.card-inputs-wrapper').addClass('opened');
+        $("input.firstone").focus()
+    })
+
+    $('.inn').click(function () {
+        $('.card-t').removeClass('active');
+        $('.inn').addClass('active');
+        $('.inn-me').addClass('visible');
+        $('.card-me').removeClass('visible');
+    })
+    $('.card-t').click(function () {
+        $('.card-t').addClass('active');
+        $('.inn').removeClass('active');
+        $('.inn-me').removeClass('visible');
+        $('.card-me').addClass('visible');
+    })
 
 });
 

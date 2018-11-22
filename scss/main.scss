@@ -156,7 +156,7 @@ body {
   text-align: center; line-height: 120px;
   border: 1px solid #525962; border-radius: 3px;
   &.visited {
-    line-height: normal;
+    line-height: normal; background: #545c66;
     a {padding-top: 43px;}
     span {
       display: block;
@@ -420,6 +420,7 @@ body {
     opacity: 1 !important;
   }
   .state-2 {
+    cursor: auto;
     opacity: 0; visibility: hidden; transition: all .3s linear;
     width: 100%; height: 100%; position: absolute;
     top: 0; left: 0; padding: 12px 20px; text-align: left;
@@ -551,7 +552,7 @@ body {
 }
 .num-text {
   margin-top: 10px;
-  font-size: $l-reg;
+  font-family: $l-reg;
   span {font-family: $l-black;}
 }
 
@@ -568,6 +569,7 @@ body {
     color: $light-grey; transition: all .3s linear;
     &.final {
       background: $blue url("../img/icons/artist.svg") center no-repeat;
+      box-shadow: 0px 4px 6px 0px rgba(15,162,176,0.35);;
       background-size: 16px;
       border: 1px solid $blue;
       line-height: 0; font-size: 0;
@@ -639,23 +641,63 @@ body {
     width: 285px; height: 328px;
     ul {transition: all .3s linear;}
     li {
-      padding-left: 40px; transition: all .3s linear;
+      .chb-label {
+        font-size: 12px; display: inline-block;
+        font-family: $g-reg; text-transform: none;
+        letter-spacing: 0;
+        vertical-align: middle; padding-left: 30px;
+        &.bold {
+          font-family: $g-bold; font-size: 10px; text-transform: uppercase;
+        }
+        &:before {
+          content: '';width: 14px; height: 14px;
+          position: absolute; border: 1px solid #cbd0d5;
+          border-radius: 3px; left: 0; top: -2px;
+        }
+      }
+      .checkbox:checked + .chb-label:before {
+        border-color: #434a53;
+        background: #434a53 url("../img/icons/checked.svg") center no-repeat;
+        background-size: 8px;
+      }
+      transition: all .3s linear;
       position: relative; border-bottom: none;
       &.bold {font-family: $g-extra}
+      /*
       &:before {
         content: '';width: 14px; height: 14px;
         position: absolute; border: 1px solid #cbd0d5;
         border-radius: 3px; left: 16px; top: 9px;
       }
-      &:after {
-        content: ''; width: 0; height: 0;
-        border: 4px solid $grey-bg;
-        border-bottom-color: transparent;
-        border-left-color: transparent;
-        border-right-color: transparent;
-        position: absolute; top: 15px; left: 0;
-        transition: all .3s linear;
+      */
+      .larrow {
+        cursor: pointer;
+        display: inline-block; vertical-align: middle;
+        position: relative; width: 12px; height: 20px;
+        margin-top: -17px; transition: all .3s linear;
+        transform: translateY(10px);
+        &.opened {
+          &:before {
+            border-left-color: transparent;
+            border-bottom-color: transparent;
+            border-top-color: $grey-bg;
+            border-right-color: transparent; top: 6px;
+          }
+        }
+        &:before {
+          content: '';
+          width: 0; height: 0;
+          border: 4px solid $grey-bg;
+          border-left-color: $grey-bg;
+          border-bottom-color: transparent;
+          border-top-color: transparent;
+          border-right-color: transparent;
+          position: absolute; top: 4px; left: 0;
+          transition: all .3s linear;
+        }
+
       }
+
       span {display: inline-block; margin-bottom: 5px;}
       &.final {&:after {display: none}}
       &.closed {
@@ -670,7 +712,14 @@ body {
     }
   }
 }
-.level-three-list {margin-bottom: -27px}
+.level-two-list, .level-three-list {
+  margin-left: 30px; margin-top: 5px;
+  display: none;
+}
+
+.level-three-list {margin-bottom: -12px}
+.level-two-list {margin-bottom: -12px}
+
 .dark-block {
   background: $grey-bg;
   color: #fff;
@@ -696,7 +745,7 @@ body {
 .signup-text {font-family: $l-reg; margin-bottom: 20px;}
 
 .common-btn {
-  display: inline-block;
+  display: inline-block; position: relative;
   text-align: center; font-family: $l-black;
   text-transform: uppercase; letter-spacing: 1px; margin-top: 10px;
   font-size: 12px; width: 275px; height: 50px; padding-top: 16px;
@@ -705,7 +754,14 @@ body {
   &.clicked {
     background: $blue;
     border-color: $blue;
-    color: #fff;
+    color: $grey-bg; cursor: auto;
+    box-shadow: 0px 10px 40px 0px rgba(15,162,176,0.3);
+    &:before {
+      content: ''; position: absolute;
+      width: 295px; height: 70px; border-radius: 3px;
+      border: 1px solid $blue; opacity: .5; left: -12px;
+      top: -12px;
+    }
   }
 }
 
@@ -738,7 +794,7 @@ body {
 .big-info {
   text-align: center;
   background: #525962; border-radius: 3px;
-  padding: 20px 30px; margin-top: 40px; font-size: $l-reg;
+  padding: 20px 30px; margin-top: 40px; font-family: $l-reg;
   color: #a2acba;
   span {color: $blue; font-family: $l-black;}
   span.white {color: #fff}
@@ -834,7 +890,9 @@ body {
   a {
     font-family: $l-reg; font-size: 12px;
     color: #9ba3ae;
-    &:hover {text-decoration: underline;}
+    &:hover {
+      text-decoration: underline;
+    }
   }
   &:before {
     content: ''; width: 17px; height: 17px;
@@ -843,7 +901,7 @@ body {
     position: absolute; top: 0; left: 0;
   }
   &:hover {
-    &:before {border-color: $grey-bg}
+
   }
 }
 .checkbox:checked + .chb-label:before {
@@ -851,7 +909,11 @@ body {
   background: #434a53 url("../img/icons/checked.svg") center no-repeat;
   background-size: 10px;
 }
-.ch-line {margin-bottom: 25px}
+.ch-line {
+  margin-bottom: 25px;
+  display: inline-block;
+  &:nth-last-of-type(even) {margin-right: 50px;}
+}
 .selects-col {
   display: inline-block;
   vertical-align: top;
@@ -903,9 +965,10 @@ body {
     font-family: $l-black; margin-bottom: 15px;
     position: relative;
     &:before {
-      content: ''; width: 9px; height: 9px; cursor: pointer;
-      position: absolute; right: 21px; top: 15px;
+      content: ''; width: 50px; height: 100%; cursor: pointer;
+      position: absolute; right: 0; top: 0;
       background: url("../img/icons/close.svg") center no-repeat;
+      background-size: 9px;
     }
   }
 }
@@ -944,14 +1007,15 @@ body {
   &.opened {opacity: 1; visibility: visible}
 }
 .edit-btn {
-  width: 40px; height: 40px;
+  width: 40px; height: 40px; cursor: pointer;
   position: absolute; top: 9px;  right: 13px;
   background: url("../img/icons/edit.svg") center no-repeat;
-  background-size: 17px;
+  background-size: 17px; transition: all .3s linear;
+  &:hover {opacity: .6;}
 }
 .t-line {
   height: 45px; padding: 0 25px;
-  &.g {background: #edf2f9;}
+  &:nth-child(odd) {background: #edf2f9;}
   span {
     line-height: 45px;
     display: inline-block;
@@ -966,8 +1030,9 @@ body {
   justify-content: space-between;
 }
 .one-pack {
+  transform-origin: 50% 30%;
   padding: 35px 15px 15px 15px;
-  border: 1px solid $grey-bg; cursor: pointer;
+  border: 1px solid $grey-bg;
   border-radius: 3px; width: 220px; height: 283px;
   text-align: center; position: relative;
   .amount {
@@ -989,8 +1054,9 @@ body {
   transition: all .3s linear;
   &:before {
     content: '';
+    transition-delay: 0;
     width: calc(100% - 30px); height: 1px; background: transparent;
-    position: absolute; top: 85px; left: 15px;
+    position: absolute; top: 79px; left: 15px;
   }
   &:hover {
     transform: scale(1.1);
@@ -1000,16 +1066,18 @@ body {
     .hint {color: $grey-bg; opacity: 1}
     &:before {
       background: #5b636c;
+      transition-delay: .3s;
     }
     .select-pack {
       background: #fff;
-      color: $grey-bg;
+      color: #c8d0db;
+      &:hover {color: $grey-bg;}
     }
   }
 }
 .tarif-block {
   position: relative;
-  .content {z-index: 5}
+  .content {z-index: 5; padding-bottom: 0;}
 }
 .grey-bg {
   width: 100%;
@@ -1043,4 +1111,208 @@ body {
       position: absolute; left: 5px; bottom: -37px;
     }
   }
+}
+
+.payment-title {
+  font-family: $g-heavy; font-size: 76px;
+  color: #edf2f9; text-transform: uppercase;
+  border-bottom: 3px solid #dee6f1; padding-bottom: 35px;
+}
+
+.payment-info-block {
+  display: inline-block; vertical-align: top;
+  margin-top: 45px;
+  p {
+    font-family: $l-reg; font-size: 14px;
+    span {font-family: $l-black}
+  }
+  padding-bottom: 140px;
+}
+.p-num-line {
+  margin-bottom: 40px;
+  &:first-of-type {margin-top: 80px;}
+  span, p {display: inline-block; vertical-align: top;}
+  span {
+    @include small-text;
+    font-size: 14px; font-family: $g-bold;
+    margin-right: 25px; margin-bottom: -2px;
+  }
+}
+
+.page-footer {
+  background: $grey-bg;
+  color: #fff;
+  .content {padding: 10px 10px 8px 10px}
+}
+.fib, .footer-contacts-block {display: inline-block;}
+
+.footer-info-block {
+  width: 666px; height: 98px; padding: 25px 30px;
+  border: 1px solid #fff; position: relative; margin-top: 30px;
+  p {
+    font-family: $g-extra;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  span {
+    background: $grey-bg;
+    display: block; width: 720px;
+    position: absolute; bottom: 15px;
+    padding: 10px 0; left: 30px;
+    font-family: $g-light; font-size: 16px;
+  }
+}
+.copyright {font-size: 9px; margin-top: 20px;}
+.sn-block {
+  margin-bottom: 65px;
+  li {display: inline-block; margin-left: 45px; &:first-child {margin-left: 0}}
+  a {
+    display: block; width: 50px; height: 50px;
+    position: relative;
+    &.fb {background: url("../img/icons/fb_hover.svg") center no-repeat}
+    &.skype {background: url("../img/icons/skype_hover.svg") center no-repeat}
+    &.whatsapp {background: url("../img/icons/whatsapp_hover.svg") center no-repeat}
+    opacity: .4; &:hover {opacity: 1}
+  }
+}
+.tel {
+  margin-bottom: 30px; display: inline-block;
+  font-family: $g-extra; font-size: 14px;
+  position: relative; padding-left: 25px;
+  &:hover {opacity: .6}
+  &:before {
+    content: ''; position: absolute; left: 0;
+    top: -2px; width: 20px; height: 20px;
+    background: url("../img/icons/phone.svg") center no-repeat;
+  }
+}
+.mail {
+  font-family: $l-reg; font-size: 14px; display: inline-block;
+  position: relative; padding-left: 0; padding-bottom: 3px;
+  border-bottom: 1px dashed #fff;
+  &:hover {opacity: .6}
+  &:before {
+    content: ''; position: absolute; left: -30px;
+    top: -2px; width: 20px; height: 20px;
+    background: url("../img/icons/mail.svg") center no-repeat;
+  }
+}
+.footer-contacts-block {
+  text-align: right; position: absolute;
+  top: 35px; right: 10px;
+}
+
+.card-tabs-block {
+  position: absolute;
+  right: 10px; top: 96px;
+}
+.card-tabs {
+  li {
+    transition: all .3s linear;
+    display: inline-block; cursor: pointer;
+    font-family: $l-black; font-size: 14px;
+    border-bottom: 3px solid #dee6f1; width: 230px;
+    padding-bottom: 10px; text-align: center;
+    color: #c8d0db;
+    &.active {color: $grey-bg; border-color: $grey-bg;}
+    &:last-of-type {margin-left: -3px}
+  }
+}
+.inn-input {
+  border: 1px solid #c8cacb; border-radius: 3px;
+  display: inline-block; vertical-align: middle;
+  width: 415px; height: 48px; padding: 15px; font-family: $l-reg;
+  font-size: 14px;
+}
+.payment-method {
+  position: absolute;
+  right: 0; top: 70px; width: 500px; text-align: right;
+  label {margin-right: 10px; font-family: $l-reg; font-size: 14px;}
+  opacity: 0; visibility: hidden; transition: all .3s linear;
+  &.visible {opacity: 1; visibility: visible}
+}
+.v-schet {
+  font-family: $l-black; font-size: 12px; margin-top: 20px;
+  text-align: center; display: inline-block; text-transform: uppercase;
+  color: $grey-bg; border-radius: 3px; border: 1px solid $grey-bg;
+  width: 283px; height: 50px; border-bottom-width: 5px; line-height: 45px;
+  &:hover {background: $grey-bg; color: #fff;}
+}
+.offerta-list {
+  margin-top: 20px;
+  li {
+    display: inline-block;
+    padding-bottom: 3px; border-bottom: 1px dashed $grey-bg;
+    a:hover {opacity: .6;}
+  }
+  li:first-child {margin-right: 20px;}
+  font-size: 12px; font-family: $l-reg;
+
+}
+.card-area {
+  position: relative; display: inline-block;
+  width: 482px; height: 279px; margin-bottom: 20px;
+  transition: all .3s linear;
+  background: url("../img/card-filled.png") center no-repeat;
+  &.filling {
+    background: url("../img/card-empty.png") center no-repeat;
+  }
+}
+.card-number {
+  position: absolute;
+  left: 40px; top: 123px;
+}
+.expire {
+  position: absolute;
+  left: 285px; top: 198px;
+}
+.card-num-input {
+  display: inline-block;
+  vertical-align: bottom; font-size: 16px;
+  width: 11px; padding-bottom: 2px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  background: transparent; margin-right: 1px; color: #fff;
+  &:focus {border-bottom: 1px solid #fff;}
+}
+.one-four {
+  display: inline-block;
+  vertical-align: bottom;
+  margin-right: 23px;
+  &:last-of-type {margin-right: 0}
+}
+.one-two {
+  display: inline-block; vertical-align: bottom;
+  &:last-of-type {margin-left: 0;}
+}
+.cvv {
+  position: absolute;
+  right: 25px; bottom: 33px;
+  .card-num-input {
+    color: $grey-bg;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    &:focus {border-bottom: 1px solid $grey-bg;}
+  }
+}
+.card-name {
+  position: absolute;
+  top: 198px; left: 40px;
+  .card-num-input {
+    width: 210px;
+  }
+}
+.card-inputs-wrapper {
+  opacity: 0; visibility: hidden;
+  transition: all .3s linear;
+  &.opened {opacity: 1; visibility: visible}
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media (max-width: 1290px) {
+
+  html, body, .block {min-width: 1px;}
+  
 }

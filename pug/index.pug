@@ -179,30 +179,67 @@ block content
                                         .plate-dd.loc-dd.mCustomScrollbar#loc-dd
                                             ul.level-one-list
                                                 li.bold
-                                                    span Вся Россия
+                                                    .larrow.f
+                                                    input.checkbox(type="checkbox" hidden="hidden" id="allrussia")
+                                                    label.chb-label.bold(for="allrussia") Вся россия
                                                     ul.level-two-list
                                                         li
-                                                            span Центр
+                                                            .larrow
+                                                            input.checkbox(type="checkbox" hidden="hidden" id="alldrussia")
+                                                            label.chb-label(for="alldrussia") Центр
                                                             ul.level-three-list
-                                                                li.final
-                                                                    span Запездье
+                                                                li
+                                                                    input.checkbox(type="checkbox" hidden="hidden" id="allbrussia")
+                                                                    label.chb-label(for="allbrussia") Запездье
 
-                                                li.closed
-                                                    span Не вся Россия
+                                            ul.level-one-list
+                                                li
+                                                    .larrow.f
+                                                    input.checkbox(type="checkbox" hidden="hidden" id="allsrussia")
+                                                    label.chb-label(for="allsrussia") Не вся Россия
 
-                                                li.closed
-                                                    span Кусочек России
+                                            ul.level-one-list
+                                                li
+                                                    .larrow.f
+                                                    input.checkbox(type="checkbox" hidden="hidden" id="allsrussiaa")
+                                                    label.chb-label(for="allsrussiaa") Не вся Россия
 
-                                                li.closed
-                                                    span Маленько Рашки
-                                                li.closed
-                                                    span Чуть-чуть Расеянства
-                                                li.closed
-                                                    span Слегка Русь
-                                                li.closed
-                                                    span Малёк Родины
-                                                li.closed
-                                                    span Немножечко Расея
+                                            ul.level-one-list
+                                                li
+                                                    .larrow.f
+                                                    input.checkbox(type="checkbox" hidden="hidden" id="allsrussiaa")
+                                                    label.chb-label(for="allsrussiaa") Не вся Россия
+
+                                            ul.level-one-list
+                                                li
+                                                    .larrow.f
+                                                    input.checkbox(type="checkbox" hidden="hidden" id="allsrussiaa")
+                                                    label.chb-label(for="allsrussiaa") Не вся Россия
+
+                                            ul.level-one-list
+                                                li
+                                                    .larrow.f
+                                                    input.checkbox(type="checkbox" hidden="hidden" id="allsrussiaa")
+                                                    label.chb-label(for="allsrussiaa") Не вся Россия
+
+                                            ul.level-one-list
+                                                li
+                                                    .larrow.f
+                                                    input.checkbox(type="checkbox" hidden="hidden" id="allsrussiaa")
+                                                    label.chb-label(for="allsrussiaa") Не вся Россия
+
+                                            ul.level-one-list
+                                                li
+                                                    .larrow.f
+                                                    input.checkbox(type="checkbox" hidden="hidden" id="allsrussiaa")
+                                                    label.chb-label(for="allsrussiaa") Не вся Россия
+
+                                            ul.level-one-list
+                                                li
+                                                    .larrow.f
+                                                    input.checkbox(type="checkbox" hidden="hidden" id="allsrussiaa")
+                                                    label.chb-label(for="allsrussiaa") Не вся Россия
+
 
 
 
@@ -508,10 +545,10 @@ block content
                                             | Familia
                                             br
                                             a(href="#") companywebsite.com
-                                .selects-col
+
                                     .ch-line
-                                        input.checkbox(type='checkbox' name='one' id='one' hidden='hidden')
-                                        label.chb-label(for="one")
+                                        input.checkbox(type='checkbox' name='two' id='two' hidden='hidden')
+                                        label.chb-label(for="two")
                                             | Familia
                                             br
                                             a(href="#") companywebsite.com
@@ -805,6 +842,102 @@ block content
                     |  делегатами
 
 
+        .block.payment-block
+            .content
+
+                .card-tabs-block
+                    ul.card-tabs
+                        li.inn.active Выставление счета
+                        li.card-t Банковская карта
+
+                    .payment-method.inn-me.visible
+                        label(for="inn") ИНН
+                        input.inn-input(type="text" id="inn")
+                        a.v-schet(href="#") выставить счет на 60 000₽
+                        ul.offerta-list
+                            li
+                                a(href="#") Публичная офферта
+                            li
+                                a(href="#") Условия возврата
+
+                    .payment-method.card-me
+                        .card-area
+                            .card-inputs-wrapper
+                                .card-number
+                                    .one-four
+                                        input.firstone.card-num-input(type="number")
+                                        input.card-num-input(type="number" max="9")
+                                        input.card-num-input(type="number" max="9")
+                                        input.card-num-input(type="number" max="9")
+
+                                    .one-four
+                                        input.card-num-input(type="number" max="9")
+                                        input.card-num-input(type="number" max="9")
+                                        input.card-num-input(type="number" max="9")
+                                        input.card-num-input(type="number" max="9")
+
+                                    .one-four
+                                        input.card-num-input(type="number" max="9")
+                                        input.card-num-input(type="number" max="9")
+                                        input.card-num-input(type="number" max="9")
+                                        input.card-num-input(type="number" max="9")
+
+                                    .one-four
+                                        input.card-num-input(type="number" max="9")
+                                        input.card-num-input(type="number" max="9")
+                                        input.card-num-input(type="number" max="9")
+                                        input.card-num-input(type="number" max="9")
+
+                                .card-name
+                                    input.card-num-input.c-name(type="text")
+
+                                .expire
+                                    .one-two
+                                        input.card-num-input(type="number" max="9")
+                                        input.card-num-input(type="number" max="9")
+                                    .one-two
+                                        input.card-num-input(type="number" max="9")
+                                        input.card-num-input(type="number" max="9")
+
+                                .cvv
+                                    input.card-num-input(type="number" max="9")
+                                    input.card-num-input(type="number" max="9")
+                                    input.card-num-input(type="number" max="9")
+
+                        a.v-schet(href="#") выставить счет на 60 000₽
+                        ul.offerta-list
+                            li
+                                a(href="#") Публичная офферта
+                            li
+                                a(href="#") Условия возврата
 
 
-include ./components/footer
+
+
+                h2.payment-title 20 переговоров
+
+                .payment-info-block
+                    p
+                        | Введите ИНН и мы выставим Вам счет на оплату на сумму
+                        span  60 000₽,
+                        br
+                        |  либо оплатите с помощью банковской карты.
+                    .p-num-line
+                        span.p-num 01
+                        p Деньги зачисляются на ваш счет в личном кабинете.
+                    .p-num-line
+                        span.p-num 02
+                        p
+                            | Если вам не удастся исчерпать депозит (например, вы записались только к 8 партнерам
+                            br
+                            |  из 10), остаток на счету вы сможете потратить на следующем Центре переговоров.
+                    .p-num-line
+                        span.p-num 03
+                        p Средства также можно потратить на on-line переговоры в RE-CONNECT.
+
+
+
+
+
+
+        include ./components/footer
